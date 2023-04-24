@@ -4,7 +4,7 @@ import Header from './components/header/Header';
 import Skills from './components/skills/Skills';
 import Nav from './components/nav/Nav';
 import About from './components/about/About';
-import Experience from './components/experience/Experience';
+import Education from './components/education/Education';
 import Portfolio from './components/portfolio/Portfolio';
 import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
@@ -17,7 +17,7 @@ const App = () => {
         <Skills />
         <Nav />
         <About />
-        <Experience />
+        <Education />
         <Portfolio />
         <Testimonials />
         <Contact />

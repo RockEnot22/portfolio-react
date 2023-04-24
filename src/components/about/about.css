@@ -1,0 +1,40 @@
+.about__container {
+  display: grid;
+  grid-template-columns: 40% 50%;
+  gap: 10%;
+  align-items: center;
+}
+
+.about__me {
+  display: grid;
+  place-items: center;
+}
+
+.about__me-image {
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 110%;
+}
+
+.about__content p{
+  margin-top: 1rem;
+}
+
+/* TABLET */
+@media screen and (max-width: 1024px){
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .about__me-image {
+    width: 70%;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px){
+  .about__content p{
+    margin-top: 1.3rem;
+  }
+}

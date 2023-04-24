@@ -1,0 +1,10 @@
+.education__container {
+
+}
+
+.education__content {
+  background: rgba(121, 156, 171, 0.3);
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  border: 2px solid transparent;
+}

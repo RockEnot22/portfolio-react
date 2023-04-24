@@ -27,14 +27,14 @@
   box-shadow: 0 0 6px rgba(0,0,0,.09);
   cursor: pointer;
   display: flex;
-  height: 5.5rem;
+  height: 5rem;
   justify-content: center;
-  width: 5.5rem;
+  width: 5rem;
 }
 
 .skills__logo-item svg {
   height: auto;
-  width: 3.5rem;
+  width: 3rem;
 }
 
 /* TABLET */

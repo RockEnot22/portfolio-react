@@ -11,11 +11,11 @@
 }
 
 :root {
-  --color-bg:#fcfcfc;
+  --color-bg:#ffffff;
   --color-bg-variant:#1A362A;
-  --color-primary:#FFAC41;
+  --color-primary:#ca7403;
   --color-primary-variant:#FF7441;
-  --color-white:#1c1c1c;
+  --color-dark:#1c1c1c;
   --color-light:#854b00;
 
   --transition: all 400ms ease;
@@ -36,7 +36,7 @@ html {
 body {
   font-family: 'Oswald', sans-serif;
   background: var(--color-bg);
-  color: var(--color-white);
+  color: var(--color-dark);
   line-height: 1.9;
 }
 
@@ -58,6 +58,7 @@ h1 {
 
 section {
   margin-top: 6rem;
+  /* height: 100vh; */
 }
 
 section > h2, section > h4 {
@@ -80,7 +81,11 @@ a {
 }
 
 a:hover {
-  color: var(--color-white);
+  color: var(--color-dark);
+}
+
+p{
+  font-weight: 300;
 }
 
 .btn {
@@ -95,7 +100,7 @@ a:hover {
 }
 
 .btn:hover {
-  background: var(--color-white);
+  background: var(--color-dark);
   color: var(--color-bg);
   border-color: transparent;
 }
