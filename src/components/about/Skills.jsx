@@ -1,10 +1,9 @@
 import React from "react";
-import "./skills.css";
 
 const Skills = () => {
   return (
     <div className="skills">
-      <p>Tech Stack</p>
+      <h3>Tech Stack</h3>
       <div className="skills__logo">
         <ul className="skills__logo-list">
           <li className="skills__logo-item">

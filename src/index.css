@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -11,18 +11,17 @@
 }
 
 :root {
-  --color-bg:#ffffff;
-  --color-bg-variant:#1A362A;
-  --color-primary:#ca7403;
-  --color-primary-variant:#FF7441;
-  --color-dark:#1c1c1c;
-  --color-light:#854b00;
+  --first-color:#ff4d64;
+  --title-color:#353252;
+  --text-color:#5e5c7f;
+  --body-color:#f9f7fd;
+  --container-color:#fff;
+
+  --shadow: 0px 5px 20px 0px rgb(68 67 96 / 10%);
+
+  --border-radius: 20px;
 
   --transition: all 400ms ease;
-
-  --container-wight-lg: 75%;
-  --container-wight-md: 86%;
-  --container-wight-sm: 90%;
 }
 
 html {
@@ -33,112 +32,188 @@ html {
   display: none;
 }
 
-body {
+body,
+button,
+input,
+textarea {
   font-family: 'Oswald', sans-serif;
-  background: var(--color-bg);
-  color: var(--color-dark);
-  line-height: 1.9;
 }
 
-.container {
-  width: var(--container-wight-lg);
-  margin: 0 auto;
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-left: 110px;
 }
 
 h1,
 h2,
-h3,
-h4 {
-  font-weight: 400;
+h3 {
+  font-weight: 700;
+  color: var(--title-color);
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 2.25rem;
 }
 
-section {
-  margin-top: 6rem;
-  /* height: 100vh; */
+h2 {
+  font-size: 1.5rem;
 }
 
-section > h2, section > h4 {
-  text-align: center;
-  color: var(--color-light);
-}
-
-section > h2 {
-  color: var(--color-primary);
-  margin-bottom: 2rem;
-}
-
-.text-light {
-  color: var(--color-light);
-}
-
-a {
-  color: var(--color-primary);
-  transition: var(--transition)
-}
-
-a:hover {
-  color: var(--color-dark);
+h3 {
+  font-size: 1.25rem;
 }
 
 p{
   font-weight: 300;
+  font-size: 1rem;
 }
 
-.btn {
-  width: max-content;
-  display: inline-block;
-  color: var(--color-primary);
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
+section {
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+}
+
+a {
+  transition: var(--transition)
+}
+
+button {
   cursor: pointer;
-  border: 1px solid var(--color-primary);
   transition: var(--transition);
-}
-
-.btn:hover {
-  background: var(--color-dark);
-  color: var(--color-bg);
-  border-color: transparent;
-}
-
-.btn-primary {
-  background: var(--color-primary);
-  color: var(--color-bg);
 }
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
   object-fit: cover;
 }
 
+.container {
+  max-width: 1080px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.section__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-left: 0.875rem;
+  position: relative;
+  margin-bottom: 3.7rem;
+}
+
+.section__title::before {
+  content: '';
+  background: url(./images/dots-bg.svg);
+  height: 4.5rem;
+  width: 2.5rem;
+  position: absolute;
+  left: -0.875rem;
+  top: -0.875rem;;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  border-radius: 1.875rem;
+  box-shadow: 0 0 1px rgb(0, 0, 0 / 0%);
+  border: 1px solid transparent;
+  color: var(--container-color);
+  display: inline-block;
+  background-color: var(--first-color);
+  font-weight: 700;
+}
+
+@keyframes button-push {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn:hover {
+  animation: button-push 0.3s linear 1;
+}
+
+
 /* TABLETS  */
 @media screen and (max-width: 1024px) {
+  body {
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section__title {
+    font-size: 1.9rem;
+    margin-bottom: 3rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  p{
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
   .container {
-    width: var(--container-wight-md);
+    max-width: 1080px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0 auto;
   }
 
   section {
-    margin-top: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
   }
 }
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
-  .container {
-    width: var(--container-wight-sm);
+  h1 {
+    font-size: 2rem;
   }
-
-  section {
+  
+  .section__title {
+    font-size: 1.6rem;
     margin-bottom: 2rem;
   }
 
-  h1 {
-    font-size: 4.5rem;
-    line-height: 1.5;
+  .section__title::before {
+    height: 3rem;
+    width: 2rem;
+    left: -0.7rem;
+    top: -0.6rem;;
+  }
+
+  section {
+    padding-top: 3.4rem;
+    padding-bottom: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+  }
+  
+  p{
+    font-weight: 300;
+    font-size: 0.9rem;
   }
 }

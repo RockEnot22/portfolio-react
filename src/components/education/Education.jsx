@@ -1,38 +1,43 @@
 import React from "react";
 import "./education.css";
-import{SiCheckio} from "react-icons/si";
-import {HiBadgeCheck} from "react-icons/hi";
+import  Data from "./data";
+import Card from "./Card";
 
 const Education = () => {
   return (
-    <section id="education">
-      <h4> Where did I learn</h4>
-      <h2>My Education</h2>
-      <div className="container education__container">
-        <div className="education__content">
-          <article className="education__details">
-            <SiCheckio />
-            <p>JavaScript. Coding Kickstarter</p>
-            <h4>Code First Girls</h4>
-          </article>
+    <section id="education" className="container section education">
+      <h2 className="section__title">Experience and Education</h2>
 
-          <article className="education__details">
-            <SiCheckio />
-            <p>JavaScript. Professional development of Web Interfaces JavaScript. Professional development of Web Interfaces</p>
-            <h4>HTML Academy</h4>
-          </article>
+      <div className="education__container grid">
+        <div className="timeline grid">
+          {Data.map((val,id) => {
+            if (val.category === "education") {
+              console.log(val.icon);
+              return (
+                <Card 
+                  key={id} 
+                  icon={val.icon} 
+                  title={val.title} 
+                  year={val.year} 
+                  desc={val.desc} />
+              )
+            }
+          })}
+        </div>
 
-          <article className="education__details">
-            <SiCheckio />
-            <p>HTML/CSS adaptive website coding and automation</p>
-            <h4>HTML Academy</h4>
-          </article>
-
-          <article className="education__details">
-            <HiBadgeCheck />
-            <p>Master of Science (MSc) ib Biotechnology</p>
-            <h4>HSaint Petersburg State Institute of Technology (Technical University)</h4>
-          </article>
+        <div className="timeline grid">
+          {Data.map((val,index) => {
+            if (val.category === "experience") {
+              return (
+                <Card 
+                  key={index} 
+                  icon={val.icon} 
+                  title={val.title} 
+                  year={val.year} 
+                  desc={val.desc} />
+              )
+            }
+          })}
         </div>
       </div>
     </section>
