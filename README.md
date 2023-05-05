@@ -15,4 +15,4 @@ JavaScript
 emailjs
 
 # How to Use
-To view my personal portfolio, simply navigate to https://rockenot.com. 
+To view my personal portfolio, simply navigate to https://rockenot.com
