@@ -35,7 +35,7 @@
 }
 
 .home__socials-link:hover {
-color: #65c9ff;
+  color: #65c9ff;
 }
 
 .home__links {
@@ -81,33 +81,31 @@ color: #65c9ff;
 
 @keyframes ani-mouse {
   0% {
-    top:29%;
+    top: 29%;
   }
 
   15% {
-    top:50%;
+    top: 50%;
   }
 
   50% {
-    top:50%;
+    top: 50%;
   }
 
   100% {
-    top:29%;
+    top: 29%;
   }
 }
 
 /* TABLET */
-@media screen and (max-width: 1024px){
-
+@media screen and (max-width: 1024px) {
   .home__socials-link {
     font-size: 1.9rem;
   }
 }
 
-
 /* MOBILE */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .home__socials-link {
     font-size: 1.7rem;
   }

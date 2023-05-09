@@ -10,7 +10,7 @@
 }
 
 .skills h3 {
-  border-right: 2px solid rgba(45,46,50,.5);
+  border-right: 2px solid rgba(45, 46, 50, 0.5);
   font-weight: 600;
   margin-right: 4rem;
   padding-right: 2rem;
@@ -28,7 +28,7 @@
   align-items: center;
   background-color: #fff;
   border-radius: 50%;
-  box-shadow: 0 0 6px rgba(0,0,0,.09);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.09);
   cursor: pointer;
   display: flex;
   height: 5rem;
@@ -43,8 +43,7 @@
 }
 
 /* TABLET */
-@media screen and (max-width: 1024px){
-
+@media screen and (max-width: 1024px) {
   .skills {
     flex-direction: column;
     gap: 1.5rem;
@@ -52,7 +51,7 @@
   }
 
   .skills h3 {
-    border-bottom: 2px solid rgba(45,46,50,.5);
+    border-bottom: 2px solid rgba(45, 46, 50, 0.5);
     border-right: none;
     margin-right: 0;
     padding-bottom: 1.5rem;
@@ -64,11 +63,8 @@
   }
 }
 
-
-
-
 /* MOBILE */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .skills__logo-item {
     height: 4rem;
     width: 4rem;
@@ -80,7 +76,7 @@
 }
 
 /* TABLET */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .about__container {
     grid-template-columns: 1fr;
     gap: 0;
@@ -92,8 +88,8 @@
 }
 
 /* MOBILE */
-@media screen and (max-width: 600px){
-  .about__content p{
+@media screen and (max-width: 600px) {
+  .about__content p {
     margin-top: 1.3rem;
   }
 }

@@ -22,7 +22,7 @@
 }
 
 .timeline__item::before {
-  content: '';
+  content: "";
   width: 2px;
   height: 100%;
   background-color: var(--first-color);
@@ -49,9 +49,8 @@
   margin: 0.5rem 0;
 }
 
-
 /* TABLET */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .education__container {
     grid-template-columns: 1fr;
     gap: 1.8rem;
@@ -72,7 +71,7 @@
 }
 
 /* MOBILE */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .timeline .icon {
     font-size: 1.3rem;
   }
