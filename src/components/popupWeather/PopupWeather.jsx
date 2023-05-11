@@ -35,7 +35,7 @@ const PopupWeather = () => {
           <p>Probably, your current location is:</p>
           <p>Latitude: {location.latitude}</p>
           <p>Longitude: {location.longitude}</p>
-          <h3>City: {location.city}</h3>
+          <p>City: {location.city}</p>
           <p>And lets look at the weather!</p>
           {weather.main ? <p>{weather.main.temp.toFixed()} &#176;C</p> : null}
           {weather.weather ? <p>{weather.weather[0].main}</p> : null}
