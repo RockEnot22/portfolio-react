@@ -8,8 +8,8 @@ const PopupWeather = () => {
   const [weather, setWeather] = useState({});
 
   useEffect(() => {
-    getLocation();
     getWeather();
+    getLocation();
   }, []);
 
   const getLocation = async () => {
@@ -33,10 +33,8 @@ const PopupWeather = () => {
       content={
         <div>
           <p>Probably, your current location is:</p>
-          <p>Latitude: {location.latitude}</p>
-          <p>Longitude: {location.longitude}</p>
-          <p>City: {location.city}</p>
-          <p>And lets look at the weather!</p>
+          <h3>{location.city}</h3>
+          <p>Lets look at the weather!</p>
           {weather.main ? <p>{weather.main.temp.toFixed()} &#176;C</p> : null}
           {weather.weather ? <p>{weather.weather[0].main}</p> : null}
         </div>
